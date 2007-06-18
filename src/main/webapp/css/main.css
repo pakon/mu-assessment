@@ -1,0 +1,77 @@
+body {
+    font-family: Trebuchet MS, sans-serif;
+    font-size: 10pt;
+    color: #777;
+    background: white;
+}
+
+p {
+    text-align: justify;
+}
+
+h1, h2 ,h3 {
+    color: #869900;
+}
+
+li {
+    text-align: justify;
+    list-style-type: none;
+    padding: 0.5em 0 0.5em 0;
+}
+
+a {
+    color: #546600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#container {
+    width: 800px;
+    margin: 20px auto;
+    padding: 1em;
+}
+
+#content {
+    border: 1px solid #ddd;
+    width: 430px;
+    padding: 1em;
+    float: left;
+}
+
+#rightNavBar {
+    border: 1px solid #ddd;
+    margin-left: 50;
+    padding: 10;
+    width: 250px;
+    float: left;
+}
+
+#loginForm {
+    width: 30ex;
+    padding: 2em;
+}
+
+#loginForm label {
+    float: left;
+    margin: 1em 0 0 1ex;
+}
+
+#loginForm input {
+    width: 18ex;
+    border: 1px solid #aaaabb;
+    background: #fcfcff;
+    margin: 1em 0 0 12ex;
+    display: inherit;
+    color: #3333bb;
+}
+
+#loginForm #submit {
+    width: 13ex;
+    margin-bottom: 1em;
+}
+
+#answerForm {
+    text-align: center;
+}

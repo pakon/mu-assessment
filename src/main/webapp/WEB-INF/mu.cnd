@@ -1,0 +1,30 @@
+<mu = 'http://www.konnikov.net/GSoC/2007/jackrabbit-jcr-demo/0.1'>
+<nt = 'http://www.jcp.org/jcr/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0' >
+
+[mu:answer] > nt:hierarchyNode
+ - mu:text (STRING) mandatory primary
+ - mu:correct (BOOLEAN) mandatory
+
+[mu:question] > nt:hierarchyNode, mix:referenceable
+ - mu:text (STRING) mandatory primary
+ - mu:weight (LONG) mandatory
+ + * = mu:answer multiple
+
+[mu:questionPackage] > nt:hierarchyNode
+ - mu:author (STRING)
+ - mu:date (DATE)
+ + * = mu:question multiple
+
+[mu:test] > nt:hierarchyNode, mix:referenceable
+ - mu:title (STRING) mandatory primary
+ - mu:questionrefs (REFERENCE) multiple < 'mu:question'
+
+[mu:topic] > nt:hierarchyNode
+ - mu:theme (STRING)  mandatory
+ - mu:testrefs (REFERENCE) mandatory multiple < 'mu:test'
+
+[mu:user] > nt:hierarchyNode
+ - mu:login (STRING) primary
+ - mu:password (STRING)
+ - mu:fullName (STRING)
