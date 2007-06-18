@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <display-name>mu-assessment - Jackrabbit Demo Application</display-name>
+
+    <!-- S E R V L E T S -->
+
+    <!-- Jackrabbit Repository Servlet -->
+    <servlet>
+        <description>
+            Servlet that makes a Jackrabbit repository available as a servlet context
+            attribute. The repository is started during servlet initialization and
+            shut down when the servlet is destroyed.
+        </description>
+        <servlet-name>JackrabbitRepositoryServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.servlet.jackrabbit.JackrabbitRepositoryServlet</servlet-class>
+        <init-param>
+            <param-name>repository.home</param-name>
+            <param-value>mu-repository</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- Init Servlet -->
+    <servlet>
+        <description>
+            The InitServlet register namespace and nodetypes, import prepared data for repository
+            needed for mu-assessment demo application.
+            InitServlet must be loaded after JackrabbitRepositoryServlet but before other servlets.
+        </description>
+        <servlet-name>InitServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.InitServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+
+    <!-- Login Servlet -->
+    <servlet>
+        <description>
+            Verify users login and password. If user sucessfully login forward to test list,
+            else redirect to error page.
+        </description>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.LoginServlet</servlet-class>
+    </servlet>
+
+    <!-- Logout Servlet -->
+    <servlet>
+        <description>
+            Invalidate web session and redirect to welcome page.
+        </description>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.LogoutServlet</servlet-class>
+    </servlet>
+
+    <!-- Test List Servlet -->
+    <servlet>
+        <description>
+            Put tests list to web session and forward to tests list page.
+        </description>
+        <servlet-name>TestListServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestListServlet</servlet-class>
+    </servlet>
+
+    <!-- Test Begin Servlet -->
+    <servlet>
+        <description>
+            todo
+        </description>
+        <servlet-name>TestBeginServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestBeginServlet</servlet-class>
+    </servlet>
+
+    <!-- Test Process Servlet -->
+    <servlet>
+        <servlet-name>TestProcessServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestProcessServlet</servlet-class>
+    </servlet>
+
+    <!-- Test End Servlet -->
+    <servlet>
+        <servlet-name>TestEndServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestEndServlet</servlet-class>
+    </servlet>
+
+    <!-- S E R V L E T   M A P P I N G -->
+    <!-- TODO rename url-patterns to form *.mu like in struts *.do -->
+
+    <servlet-mapping>
+        <servlet-name>InitServlet</servlet-name>
+        <url-pattern>/init</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TestListServlet</servlet-name>
+        <url-pattern>/testlist</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TestBeginServlet</servlet-name>
+        <url-pattern>/begintest</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TestProcessServlet</servlet-name>
+        <url-pattern>/process</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TestEndServlet</servlet-name>
+        <url-pattern>/testend</url-pattern>
+    </servlet-mapping>
+
+    <!-- F I L T E R S -->
+
+    <filter>
+        <filter-name>SetCharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.jackrabbit.demo.mu.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <!-- F I L T E R   M A P P I N G -->
+
+    <filter-mapping>
+        <filter-name>SetCharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!-- W E L C O M E   F I L E S -->
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- P A R A M E T E R S -->
+
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
+        <param-value>en</param-value>
+    </context-param>
+
+</web-app>
