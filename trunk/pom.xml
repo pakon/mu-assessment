@@ -31,7 +31,7 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>mu-assessment Jackrabbit Demo Application</name>
-    <url>http://maven.apache.org</url>
+    <url>http://mu-assessment.googlecode.com/</url>
     <description>Web application that hosts and serves a Jackrabbit content repository</description>
     <developers>
         <developer>
