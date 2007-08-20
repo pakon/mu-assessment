@@ -117,7 +117,7 @@ public class TestProcess
     public boolean isMultiple()
     {
     	if (questionNumber == 0) {
-    		return false
+    		return false;
     	}
         int counter = 0;
         List<Answer> answers = test.getQuestions().get(questionNumber-1).getAnswers();
