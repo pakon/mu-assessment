@@ -33,36 +33,36 @@
 <!-- container begin -->
 <div id="container">
 
-    <h1>mu-assessment - Jackrabbit Demo Application</h1>
-
+    <%@ include file="/include/tabs.jsp"%>
+              
     <!-- content begin -->
     <div id="content">
 
         <div class="question-text">
-            <h1>Question number ${questionSummary.position}</h1>
+            <h2>Question number ${position}</h2>
 
             <div>
-                <p>${questionSummary.questionText}</p>
+                <p>${question.text}</p>
             </div>
-            <c:url var="processUrl" value="/process"/>
+            <c:url var="processUrl" value="/process-test"/>
             <form id="answerForm" method="post" action="${processUrl}">
                 <ul>
-                    <c:forEach var="answer" items="${questionSummary.answers}" varStatus="count">
-                        <li>
+                    <c:forEach var="answer" items="${question.answers}" varStatus="count">
+                        <li style="list-style-type:none;">
                             <c:choose>
-                                <c:when test="${questionSummary.multiple}">
-                                    <input type="checkbox" name="answer[${count}]" value="on" id="answer${count}"/>
+                                <c:when test="${multiple}">
+                                    <input type="checkbox" name="answer${count.index}" value="on" id="answer${count.index}"/>
                                 </c:when>
                                 <c:otherwise>
-                                    <input type="radio" name="answer" id="answer${count}"/>
+                                    <input type="radio" name="answer" id="answer${count.index}" value="answer${count.index}"/>
                                 </c:otherwise>
                             </c:choose>
-                            <label for="answer${count}">${answer.text}</label>
+                            <label for="answer${count.index}">${answer.text}</label>
                         </li>
                     </c:forEach>
                 </ul>
                 <input type="hidden" name="command" value="notdefitit"/>
-                <input type="hidden" name="number" value="${questionSummary.position}"/>
+                <input type="hidden" name="number" value="${position}"/>
                 <input type="button" value="Answer"
                        onclick="javascript: document.forms['answerForm'].command.value='process'; document.forms['answerForm'].submit();"/>
             </form>

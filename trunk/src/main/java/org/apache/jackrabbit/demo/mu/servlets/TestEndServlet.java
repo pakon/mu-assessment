@@ -16,7 +16,6 @@
  */
 package org.apache.jackrabbit.demo.mu.servlets;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,13 +23,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * 
+ * End test process.
  */
-public class TestEndServlet extends HttpServlet {
-
-    //TODO потом будем передавать результаты
-    protected void service(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
-        RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/testslist/testend.jsp");
-        rd.forward(httpServletRequest,httpServletResponse);
+public class TestEndServlet extends HttpServlet
+{
+    protected void service(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException
+    {
+        getServletContext().getRequestDispatcher("/pages/EndTest.jsp").forward(httpServletRequest, httpServletResponse);
     }
 }

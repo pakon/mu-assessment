@@ -18,6 +18,9 @@
 %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="javax.jcr.Node" %>
+<%@ page import="org.apache.jackrabbit.demo.mu.model.Question" %>
+<%@ page import="org.apache.commons.lang.StringUtils" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sess" uri="http://jakarta.apache.org/taglibs/session-1.0" %>
@@ -32,19 +35,26 @@
 <!-- container begin -->
 <div id="container">
 
-    <h1>mu-assessment - Jackrabbit Demo Application</h1>
+    <%@ include file="/include/tabs.jsp"%>
 
     <!-- content begin -->
     <div id="content">
 
-        <h1>The end!</h1>
+        <h2>Questions in package ${packageId}</h2>
 
-        <c:url var="welcomeUrl" value="/welcome"/>
-        <c:url var="testListUrl" value="/testlist"/>
-        <ul>
-            <li><a href="${welcomeUrl}">Go to welcome page...</a></li>
-            <li><a href="${testListUrl}">or to available tests list</a></li>
-        </ul>
+        <c:url var="questionEditUrl" value="/edit-question"/>
+
+        <ol>
+            <c:forEach var="question" items="${questions}">
+                <%
+                    Question question = (Question) pageContext.getAttribute("question");
+                    pageContext.setAttribute("questionAbrText", StringUtils.abbreviate(question.getText(), 50));
+                %>
+                <li>
+                    <a href="${questionEditUrl}?id=${question.id}">${questionAbrText}</a>
+                </li>
+            </c:forEach>
+        </ol>
 
     </div>
     <!-- content end -->

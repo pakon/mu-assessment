@@ -60,8 +60,8 @@
         <description>
             Put tests list to web session and forward to tests list page.
         </description>
-        <servlet-name>TestListServlet</servlet-name>
-        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestListServlet</servlet-class>
+        <servlet-name>TestsServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestsServlet</servlet-class>
     </servlet>
 
     <!-- Test Begin Servlet -->
@@ -85,8 +85,93 @@
         <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestEndServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>SourceFilesServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.SourceFilesServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>SourceFileServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.SourceFileServlet</servlet-class>
+    </servlet>
+
+    <!-- Packages List Servlet -->
+    <servlet>
+        <servlet-name>PackagesServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.PackagesServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>PackageServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.PackageServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>PackageUploadServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.PackageUploadServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>PackageDeleteServletServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.PackageDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>QuestionEditServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.QuestionEditServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>QuestionUpdateServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.QuestionUpdateServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ErrorServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.ErrorServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.WelcomeServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TestCreateServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestCreateServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TestAddServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestAddServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TopicCreateServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TopicCreateServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TestDeleteServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>TestEditServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.TestEditServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>PackageDownloadServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.PackageDownloadServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DumpServlet</servlet-name>
+        <servlet-class>org.apache.jackrabbit.demo.mu.servlets.DumpServlet</servlet-class>
+    </servlet>
+
     <!-- S E R V L E T   M A P P I N G -->
-    <!-- TODO rename url-patterns to form *.mu like in struts *.do -->
 
     <servlet-mapping>
         <servlet-name>InitServlet</servlet-name>
@@ -104,21 +189,106 @@
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>TestListServlet</servlet-name>
-        <url-pattern>/testlist</url-pattern>
+        <servlet-name>TestsServlet</servlet-name>
+        <url-pattern>/tests</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>TestBeginServlet</servlet-name>
-        <url-pattern>/begintest</url-pattern>
+        <url-pattern>/begin-test</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>TestProcessServlet</servlet-name>
-        <url-pattern>/process</url-pattern>
+        <url-pattern>/process-test</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>TestEndServlet</servlet-name>
-        <url-pattern>/testend</url-pattern>
+        <url-pattern>/end-test</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SourceFilesServlet</servlet-name>
+        <url-pattern>/source-files</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>SourceFileServlet</servlet-name>
+        <url-pattern>/source-file</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PackagesServlet</servlet-name>
+        <url-pattern>/packages</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PackageServlet</servlet-name>
+        <url-pattern>/package</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PackageUploadServlet</servlet-name>
+        <url-pattern>/upload-package</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PackageDeleteServletServlet</servlet-name>
+        <url-pattern>/delete-package</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>QuestionUpdateServlet</servlet-name>
+        <url-pattern>/update-question</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>QuestionEditServlet</servlet-name>
+        <url-pattern>/edit-question</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ErrorServlet</servlet-name>
+        <url-pattern>/error</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TestCreateServlet</servlet-name>
+        <url-pattern>/create-test</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TestAddServlet</servlet-name>
+        <url-pattern>/add-test</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TopicCreateServlet</servlet-name>
+        <url-pattern>/create-topic</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TestDeleteServlet</servlet-name>
+        <url-pattern>/delete-test</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PackageDownloadServlet</servlet-name>
+        <url-pattern>/download-package</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>TestEditServlet</servlet-name>
+        <url-pattern>/edit-test</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DumpServlet</servlet-name>
+        <url-pattern>/dump</url-pattern>
     </servlet-mapping>
 
     <!-- F I L T E R S -->

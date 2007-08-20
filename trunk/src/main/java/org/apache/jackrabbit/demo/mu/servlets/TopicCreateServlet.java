@@ -16,49 +16,36 @@
  */
 package org.apache.jackrabbit.demo.mu.servlets;
 
-import org.apache.commons.collections.IteratorUtils;
-import org.apache.log4j.Logger;
+import org.apache.jackrabbit.demo.mu.dao.TopicDao;
 
 import javax.jcr.RepositoryException;
-import javax.jcr.query.QueryResult;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.MessageFormat;
 
 /**
- * Put tests list to web session and forward to tests list page.
+ *
  */
-public class TestListServlet extends MuServlet
+public class TopicCreateServlet extends MuServlet
 {
-    private static final Logger log = Logger.getLogger(TestListServlet.class);
-
-    /**
-     * Receives standard HTTP requests from the public service method
-     * and dispatches them to the doXXX methods defined in this class.
-     */
     protected void service(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException
     {
+        String topicTheme = httpServletRequest.getParameter("name");
         try {
             // login to repository
             loginToRepository();
 
-            // construct query
-            String queryString = "select * from mu:test";
+            TopicDao topicDao = new TopicDao(session);
+            topicDao.createTopic(topicTheme);
 
-            // execute query
-            QueryResult result = session.getWorkspace().getQueryManager().createQuery(queryString, "sql").execute();
+            String response = MessageFormat.format("<script type=\"text/javascript\">opener.dismissAddAnotherPopup(window, \"{0}\", \"[Topic] {0}\");</script>", topicTheme);
+            httpServletResponse.setContentType("text/html");
+            httpServletResponse.getOutputStream().print(response);
 
-            // put tests list to web session
-            httpServletRequest.setAttribute("testList", IteratorUtils.toList(result.getNodes()));
-
-            // forward to tests list page
-            RequestDispatcher requestDispatcher = this.getServletContext().getRequestDispatcher("/testslist/");
-            requestDispatcher.forward(httpServletRequest, httpServletResponse);
         } catch (RepositoryException e) {
-            log.error("Can't select tests from repository");
-            throw new ServletException(e);
+            e.printStackTrace();
         } finally {
             // don't forget loguot
             session.logout();

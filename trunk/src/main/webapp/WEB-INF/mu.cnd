@@ -11,7 +11,7 @@
  - mu:weight (LONG) mandatory
  + * = mu:answer multiple
 
-[mu:questionPackage] > nt:hierarchyNode
+[mu:questionPackage] > nt:hierarchyNode, mix:referenceable
  - mu:author (STRING)
  - mu:date (DATE)
  + * = mu:question multiple

@@ -26,18 +26,19 @@ import org.apache.jackrabbit.core.nodetype.compact.ParseException;
 import org.apache.jackrabbit.demo.mu.exceptions.InitializationException;
 import org.apache.jackrabbit.demo.DemoUtils;
 import org.apache.log4j.Logger;
+import org.apache.commons.io.FileUtils;
 
 import javax.jcr.*;
-import javax.jcr.query.QueryResult;
+import javax.jcr.observation.Event;
+import javax.jcr.observation.ObservationManager;
+import javax.jcr.observation.EventIterator;
+import javax.jcr.observation.EventListener;
 import javax.servlet.ServletException;
-import javax.servlet.ServletConfig;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.List;
+import java.util.Date;
 import java.text.MessageFormat;
 
 /**
@@ -47,6 +48,8 @@ import java.text.MessageFormat;
 public class InitServlet extends MuServlet
 {
     private static final Logger log = Logger.getLogger(InitServlet.class);
+
+    private Session observationSession;
 
     /**
      * Receives standard HTTP requests from the public service method
@@ -65,6 +68,9 @@ public class InitServlet extends MuServlet
                 // import prepared data for demo application from XML document
                 importPreparedRepositoryData("/WEB-INF/imported-data.xml");
             }
+
+            // register repository observer
+            registerObservers();
 
             // succefully init and forward to welcome page
             httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/welcome");
@@ -136,15 +142,73 @@ public class InitServlet extends MuServlet
 
             log.info("Prepared data for repository was imported");
 
-            // print dump for "/mu-root" node
-            Node muRootNode = session.getRootNode().getNode("mu-root");
-            DemoUtils.dump(muRootNode);
         } catch (IOException e) {
             log.error("Error while importing prepared data from " + dataFileLocation);
             throw new InitializationException(e);
         } catch (RepositoryException e) {
             log.error("Error while importing prepared data from " + dataFileLocation);
             throw new InitializationException(e);
+        }
+    }
+
+    private void registerObservers()
+    {
+        final String basePath = getServletContext().getRealPath("/");
+        log.info("Observation support is: " + repository.getDescriptor(Repository.OPTION_OBSERVATION_SUPPORTED));
+        try {
+            observationSession = repository.login(new SimpleCredentials("jackrabbit", "jackrabbit".toCharArray()));
+            ObservationManager om = observationSession.getWorkspace().getObservationManager();
+            om.addEventListener(
+                    new EventListener()
+                    {
+                        private LogWriter logger = new LogWriter(basePath);
+
+                        public void onEvent(EventIterator eventIterator)
+                        {
+                            while (eventIterator.hasNext()) {
+                                Event muEvent = eventIterator.nextEvent();
+                                try {
+                                    Node added = (Node) observationSession.getItem(muEvent.getPath());
+                                    logger.writeLog(added.getUUID(), added.getProperty("mu:title").getString());
+                                } catch (RepositoryException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                    }, Event.NODE_ADDED, "/mu-root/tests", true, null, null, false
+            );
+        } catch (RepositoryException e) {
+            e.printStackTrace();
+            log.error("Error while registring observers, repository not suppotr it");
+        } catch (IOException e) {
+            e.printStackTrace();
+            log.error("Error while writing into log file");
+        }
+    }
+
+    class LogWriter
+    {
+        private static final String LOG_FILENAME = "observation.log";
+
+        private File logFile;
+
+
+        public LogWriter(String basePath) throws IOException
+        {
+            logFile = new File(basePath + System.getProperty("file.separator") + LOG_FILENAME);
+            if (!logFile.exists()) FileUtils.touch(logFile);
+        }
+
+        public synchronized void writeLog(String testId, String title)
+        {
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter(logFile, true));
+                writer.append(MessageFormat.format("<li>New test <a href=\"begin-test?id={0}\"> \"{2}\"</a> was created at {1} </li>", testId, new Date(), title));
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+                log.error("Error while writing into log file");
+            }
         }
     }
 }

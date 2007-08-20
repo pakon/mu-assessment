@@ -3,7 +3,20 @@ package org.apache.jackrabbit.demo.mu.model;
 /**
  *
  */
-public enum TestCommandType {
+public enum TestCommandType
+{
+    /**
+     *
+     */
+    process,
 
-    process, abort, notdefinit
+    /**
+     *
+     */
+    abort,
+
+    /**
+     *
+     */
+    notdefinit
 }

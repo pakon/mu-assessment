@@ -29,14 +29,29 @@
 <sess:existsAttribute name="user">
     <c:set var="userNotLogin" scope="page" value="false"/>
     <c:url var="logoutUrl" value="/logout"/>
-    <c:url var="welcomeUrl" value="/welcome/"/>
-    <c:url var="testListUrl" value="/testlist"/>
+    <c:url var="welcomeUrl" value="/welcome"/>
+    <c:url var="testListUrl" value="/tests"/>
+    <c:url var="dumpUrl" value="/dump"/>
     <div id="rightNavBar">
-        <h2>User: ${user_name}</h2>
+        <h2>User: ${user.fullName}</h2>
         <ul>
             <li><a href="${welcomeUrl}">Welcome page</a></li>
             <li><a href="${testListUrl}">Available tests</a></li>
             <li><a href="${logoutUrl}">Logout</a></li>
+        </ul>
+        <c:if test="${user.login == 'system'}">
+            <c:url var="packagesListUrl" value="/packages"/>
+            <c:url var="addTestUrl" value="/add-test"/>
+            <h2>Management</h2>
+            <ul>
+                <li><a href="${packagesListUrl}">Question packages</a></li>
+                <li><a href="${addTestUrl}">Create new test</a></li>
+                <li><a href="${dumpUrl}">Dump repository</a></li>
+            </ul>
+        </c:if>
+        <h2>New tests notifications</h2>
+        <ul>
+            <%@ include file="/observation.log" %>
         </ul>
     </div>
 </sess:existsAttribute>
@@ -44,15 +59,22 @@
 <c:if test="${userNotLogin}">
     <div id="rightNavBar">
         <c:url var="loginUrl" value="/login"/>
-        <div id="login">
-            <form id="loginForm" action="${loginUrl}">
-                <label for="loginFiled">Login:</label>
-                <input id="loginFiled" type="text" name="login" value="system"/>
-                <label for="passwordField">Password:</label>
-                <input id="passwordField" type="password" name="password" value="manager"/>
-                <input id="submitButton" type="submit" value="Login"/>
-            </form>
-        </div>
+        <form id="loginForm" action="${loginUrl}">
+            <table id="login" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><label for="loginFiled">Login:</label></td>
+                    <td><input id="loginFiled" type="text" name="login" value="system"/></td>
+                </tr>
+                <tr>
+                    <td><label for="passwordField">Password:</label></td>
+                    <td><input id="passwordField" type="password" name="password" value="manager"/></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><input id="submitButton" type="submit" value="Login"/></td>
+                </tr>
+            </table>
+        </form>
 
     </div>
 </c:if>

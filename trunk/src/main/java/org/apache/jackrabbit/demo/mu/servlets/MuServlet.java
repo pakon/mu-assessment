@@ -50,6 +50,5 @@ public class MuServlet  extends HttpServlet
     {
         // login to repository with non anonimous credentials to have write access
         session = repository.login(new SimpleCredentials("jackrabbit", "jackrabbit".toCharArray()));
-        log.info("Login to repository");
     }
 }

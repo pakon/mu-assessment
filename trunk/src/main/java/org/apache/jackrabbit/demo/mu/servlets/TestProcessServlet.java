@@ -16,62 +16,89 @@
  */
 package org.apache.jackrabbit.demo.mu.servlets;
 
-import org.apache.jackrabbit.demo.mu.model.TestProcess;
-import org.apache.jackrabbit.demo.mu.model.TestCommandType;
 import org.apache.jackrabbit.demo.mu.exceptions.TestEndException;
-import org.apache.jackrabbit.servlet.ServletRepository;
+import org.apache.jackrabbit.demo.mu.model.TestCommandType;
+import org.apache.jackrabbit.demo.mu.model.TestProcess;
 
+import javax.jcr.RepositoryException;
 import javax.servlet.ServletException;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.jcr.Repository;
-import javax.jcr.Session;
-import javax.jcr.LoginException;
-import javax.jcr.RepositoryException;
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
+ * Process answers on previous question and forward to the nex one or to the results of test.
  *
+ * @author Pavel Konnikov
+ * @version $Revision$ $Date$
  */
-public class TestProcessServlet extends HttpServlet {
-
-    private final Repository repository = new ServletRepository(this);
-
-    protected void service(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException {
+public class TestProcessServlet extends MuServlet
+{
+    protected void service(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException
+    {
         String command;
-        String number;
         if (httpServletRequest.getAttribute("newtest") != null) {
             command = "process";
-            number = "0";
         } else {
-            number = httpServletRequest.getParameter("number");
             command = httpServletRequest.getParameter("command");
         }
+
         switch (TestCommandType.valueOf(command)) {
             case abort:
-                httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "index.jsp");
+                httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/tests");
                 break;
             case process:
-                RequestDispatcher requestDispatcher;
-                Session session = null;
                 try {
-                    session = repository.login();
-                    TestProcess testprocess = (TestProcess) httpServletRequest.getSession().getAttribute("process");
-                    httpServletRequest.setAttribute("questionSummary", testprocess.processPosition(
-                            Long.valueOf(number), session));
-                    requestDispatcher = this.getServletContext().getRequestDispatcher("/process/index.jsp");
-                    requestDispatcher.forward(httpServletRequest, httpServletResponse);
+                    // login to repository
+                    loginToRepository();
+
+                    // get test process attribute
+                    TestProcess testProcess = (TestProcess) httpServletRequest.getSession().getAttribute("process");
+
+                    List<Integer> nubersOfGivenAnswers = new LinkedList<Integer>();
+                    for (Object param : httpServletRequest.getParameterMap().keySet()) {
+                        if (httpServletRequest.getParameter((String) param).equals("on")) {
+                            // in case checkboxes
+                            nubersOfGivenAnswers.add(Integer.valueOf(((String) param).substring(6)));
+                        } else if (((String) param).startsWith("answer")) {
+                            // in case radio buttons
+                            nubersOfGivenAnswers.add(Integer.valueOf(httpServletRequest.getParameter((String) param).substring(6)));
+                        }
+                    }
+
+                    // process given answers
+                    testProcess.processGivenAnswers(nubersOfGivenAnswers);
+
+                    // give next question
+                    httpServletRequest.setAttribute("multiple", testProcess.isMultiple());
+                    httpServletRequest.setAttribute("question", testProcess.nextQuestion());
+                    httpServletRequest.setAttribute("position", testProcess.getQuestionNumber());
+
+                    // forward to next question
+                    getServletContext().getRequestDispatcher("/pages/ProcessQuestion.jsp").forward(httpServletRequest, httpServletResponse);
+
                 } catch (TestEndException e) {
-                    requestDispatcher = this.getServletContext().getRequestDispatcher("/testend");
-                    requestDispatcher.forward(httpServletRequest, httpServletResponse);
-                } catch (LoginException e) {
-                    e.printStackTrace();
+                    // remove possible setted web session attributes
+                    httpServletRequest.removeAttribute("question");
+                    httpServletRequest.removeAttribute("position");
+                    httpServletRequest.removeAttribute("multiple");
+
+                    // forward to the test results
+                    httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/end-test");
                 } catch (RepositoryException e) {
-                    e.printStackTrace();
-                } finally{
-                  session.logout();
+                    // remove possible setted web session attributes
+                    httpServletRequest.removeAttribute("question");
+                    httpServletRequest.removeAttribute("position");
+                    httpServletRequest.removeAttribute("multiple");
+
+                    // redirect to the error page
+                    httpServletRequest.getSession().setAttribute("errorDescription", "Can't process question.");
+                    httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/error");
+                } finally {
+                    // don't forget loguot
+                    session.logout();
                 }
                 break;
         }

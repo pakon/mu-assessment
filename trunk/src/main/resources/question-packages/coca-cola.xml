@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+         xmlns:mu="http://www.konnikov.net/GSoC/2007/jackrabbit-jcr-demo/0.1" xmlns:rep="internal"
+         xmlns:fn_old="http://www.w3.org/2004/10/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+         xmlns:fn="http://www.w3.org/2005/xpath-functions" sv:name="questions-package">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mu:questionPackage</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>b1fa5f02-6cc1-487c-922a-3cb86007874b</sv:value>
+    </sv:property>
+    <sv:property sv:name="mu:date" sv:type="Date">
+        <sv:value>2007-08-19T18:03:47.968+04:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:created" sv:type="Date">
+        <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mu:author" sv:type="String">
+        <sv:value>Pavel Konnikov</sv:value>
+    </sv:property>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>61ba2234-4ff9-40c5-a826-6081d1652ca0</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>How does the Coca-cola company describe itself on its website?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Makers of the worlds greatest drink</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>The world's most inclusive company</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>The company that exists to benefit everyone</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>4daaf92a-a2b4-40b3-8de7-66010d3e55ad</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Where is Coca-cola headquaters situated?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Seattle,Washington</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Houston,Texas</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Atlanta,Georgia</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Miami, florida</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>9f213919-0bfe-47f0-941b-7d1ea1e651a2</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>How much did the first Coca-cola sell for in 1886?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>3 cents</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>5 cents</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>7 cents</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>10 cents</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.281+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>b6ebd906-a710-4c3f-b7eb-06b6bbb43eed</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>During its first year how much Coca-cola was sold on average each day?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>4 glasses a day</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>9 glasses a day</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>28 glasses a day</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>2 glasses a day</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>b8d7c4c8-df40-4c96-9353-7eba6bcd2883</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>What kind of maps did Coca-cola produce during the 1960's?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Maps of various parts of the U.S. with distances marked between cities</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>World maps showing where Coca-cola was made</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Car atlases</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Drink mat maps</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>690497ee-b343-42ae-b107-a6c084fbdc21</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>What was the Coca-cola slogan in 1922?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Thirst has no season</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Everything your thist could ask for</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Drink Coca-cola</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Coke refreshes you best</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.296+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>e9184f8a-3372-43f8-a960-4dc332e27e08</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>In 1993 Coca-cola was being advertised as what?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Coke refreshes you best</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>The ideal brain tonic</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Coke is it</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Coca-cola revives and refreshes</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>bd0ec121-3165-4d20-8d66-3243cde1392d</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>How did Coca-cola Enterprises describe itself in 2006?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>The world's largest bottler</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Thirst quencher to the world</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>The satisfying company</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>The thirst satisfying company</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T15:35:30.312+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+</sv:node>
