@@ -1,21 +1,49 @@
 body {
     font-family: Trebuchet MS, sans-serif;
-    font-size: 10pt;
+    font-size: 12pt;
     color: #777;
     background: white;
 }
 
 p {
     text-align: justify;
+    padding: 0.3em 3ex 0.5em 3ex;
+    margin: 0 0 0 0;
+}
+
+pre {
+    overflow: auto;
+    font-size: 70%;
 }
 
 h1, h2 ,h3 {
     color: #869900;
 }
 
+h1 {
+    font-size: 200%;
+    margin: 0;
+    padding: 0.3em 0 1em 0;
+}
+
+h2 {
+    font-size: 150%;
+    margin: 0;
+    padding: 0.3em 0 0 0;
+}
+
+img {
+    border: none;
+}
+
+.topic-with-tests {
+    float: left;
+    width: 30%
+}
+
 li {
     text-align: justify;
-    list-style-type: none;
+    list-style-type: circle;
     padding: 0.5em 0 0.5em 0;
 }
 
@@ -28,50 +56,100 @@ a:hover {
 }
 
 #container {
-    width: 800px;
-    margin: 20px auto;
-    padding: 1em;
+    margin: 0;
+    padding: 0 0 0 5ex;
+}
+
+#tabs {
+    margin: 0 0 0.2em 0;
+    padding: 0;
+}
+
+#tabs a {
+    text-decoration: none;
+}
+
+#tabs span {
+    background: #bd7;
+    background: #f2ffcd;
+    background: #ffffff;
+    color: #fff;
+    color: #ccc;
+    border: 1px solid #ddd;
+    padding: 0.2em 1ex;
+    margin: 0 0.5ex 0 0;
+}
+
+#tabs span.selected-tab {
+    border-bottom: 1px solid #fff;
+    color: #aaa;
 }
 
 #content {
     border: 1px solid #ddd;
-    width: 430px;
+    width: 60%;
     padding: 1em;
     float: left;
 }
 
 #rightNavBar {
-    border: 1px solid #ddd;
-    margin-left: 50;
-    padding: 10;
-    width: 250px;
+    /*border: 1px solid #ddd;*/
+    margin-left: 2ex;
+    /*padding: 1em;*/
+    width: 30%;
     float: left;
 }
 
 #loginForm {
-    width: 30ex;
-    padding: 2em;
+    padding: 1em;
+    border: 1px solid #ddd;
 }
 
 #loginForm label {
-    float: left;
-    margin: 1em 0 0 1ex;
+    margin: 1ex;
+    padding: 0;
 }
 
 #loginForm input {
-    width: 18ex;
-    border: 1px solid #aaaabb;
-    background: #fcfcff;
-    margin: 1em 0 0 12ex;
-    display: inherit;
-    color: #3333bb;
+    border: 1px solid #aabbaa;
+    background: #f2ffcd;
+    color: #546600;
+    width: 15ex;
+    margin: 1ex;
+    padding-left: 0.5em;
 }
 
-#loginForm #submit {
-    width: 13ex;
-    margin-bottom: 1em;
+#loginForm #submitButton {
+    width: 10ex;
+    padding-left: 0;
+}
+
+#loginForm input, #loginForm label {
+    font-size: 11pt;
+    font-family: Trebuchet MS, sans-serif;
+}
+
+#userMenu {
+    padding: 1em;
+    border: 1px solid #ddd;
+}
+
+.topicBlock {
+    vertical-align: top;
+    padding: 1em;
 }
 
 #answerForm {
     text-align: center;
+}
+
+.debug {
+    border: 1px solid red;
+    padding: 1em;
+    width: 60%;
+    margin: 0 0 1em 0;
+}
+
+#uploadPackage {
+    margin: 2em 0 0 0;
 }

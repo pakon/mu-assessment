@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+         xmlns:mu="http://www.konnikov.net/GSoC/2007/jackrabbit-jcr-demo/0.1" xmlns:rep="internal"
+         xmlns:fn_old="http://www.w3.org/2004/10/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+         xmlns:fn="http://www.w3.org/2005/xpath-functions" sv:name="questions-package">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mu:questionPackage</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>0d04549e-7339-4653-8d31-de17266ceda2</sv:value>
+    </sv:property>
+    <sv:property sv:name="mu:date" sv:type="Date">
+        <sv:value>2007-08-19T18:03:47.968+04:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mu:author" sv:type="String">
+        <sv:value>Pavel Konnikov</sv:value>
+    </sv:property>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>3cd9066e-270c-4943-8dbd-80dba577707f</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Who is the first name of J. K. Rowling, the author of the Harry Potter series of books?</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Jane</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Joanne</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Jennifer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Janice</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>In which year was the first Harry Potter book released?</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>1995</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>1996</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>1997</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>1998</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>6cb358d8-3e78-470e-8eb5-1973e7686106</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>How many Harry Potter books have been released so far?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T16:07:46.171+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>4</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.171+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>5</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.171+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>6</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.171+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>7</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.187+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>3cb840e1-b374-4690-888c-6f12a5f3a398</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>What is tentatively believed to be the last word in the last book on Harry Potter?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T16:07:46.187+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Death</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.187+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Scar</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.187+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>After</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.187+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Doom</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.187+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>61647b54-58c4-4b83-9ce1-3e7b842f844c</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Who is the publisher of all the Harry Potter books</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T16:07:46.187+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Bloomsbury</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.187+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Harper Collins</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Penguin</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Amadeus</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>974d75d8-a578-41b9-9e04-e2c681869340</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Where does the first Harry Potter book begin?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>At Godric's Hollow</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>At Number 4, Privet Drive</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>At Number 12, Grimmauld's Place</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>At Hogwarts</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>15036a41-a2b1-48b5-895a-2e710ddfc16d</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Which is the fourth book in the Harry Potter series?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Harry Potter and the Chamber of Secrets</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Harry Potter and the Prisoner of Azkaban</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Harry Potter and the Goblet of Fire</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Harry Potter and the Order of the Phoenix</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>0077b977-47bc-4552-8c2d-1b4309fb05a9</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Which of the following awards has the Harry Potter series not earned?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Whitaker Platinum Book Awards</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Pulitzer Prize</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Nestlй Smarties Book Prizes</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.203+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Scottish Arts Council Book Awards</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-20T16:07:46.218+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+</sv:node>

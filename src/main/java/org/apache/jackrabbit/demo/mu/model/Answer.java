@@ -16,41 +16,72 @@
  */
 package org.apache.jackrabbit.demo.mu.model;
 
-import java.io.Serializable;
-
 /**
+ * Represent the answer to a question.
  *
  * @author Pavel Konnikov
  * @version $Revision$ $Date$
  */
-public class Answer implements Serializable {
-
+public class Answer
+{
+    /**
+     * The text of the answer.
+     */
     private String text;
 
-    private boolean correct;
+    /**
+     * True if answer is correct.
+     */
+    private Boolean correct;
 
-    public Answer(String text, boolean correct)
+    /**
+     * Create answer with given text and "correct" value.
+     *
+     * @param text    the text of the answer
+     * @param correct is the answer correct or not
+     */
+    public Answer(String text, Boolean correct)
     {
         this.text = text;
         this.correct = correct;
     }
 
+    /**
+     * Returns the text of the answer.
+     *
+     * @return the text of the answer
+     */
     public String getText()
     {
         return text;
     }
 
+    /**
+     * Set the text of the answer.
+     *
+     * @param text the text of the answer
+     */
     public void setText(String text)
     {
         this.text = text;
     }
 
-    public boolean isCorrect()
+    /**
+     * Returns answer "correct" value.
+     *
+     * @return true if answer is correct
+     */
+    public Boolean getCorrect()
     {
         return correct;
     }
 
-    public void setCorrect(boolean correct)
+    /**
+     * Set answer "correct" value.
+     *
+     * @param correct is the answer correct or not
+     */
+    public void setCorrect(Boolean correct)
     {
         this.correct = correct;
     }

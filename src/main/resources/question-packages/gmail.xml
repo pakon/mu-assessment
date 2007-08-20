@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+         xmlns:mu="http://www.konnikov.net/GSoC/2007/jackrabbit-jcr-demo/0.1" xmlns:rep="internal"
+         xmlns:fn_old="http://www.w3.org/2004/10/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+         xmlns:fn="http://www.w3.org/2005/xpath-functions" sv:name="questions-package">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mu:questionPackage</sv:value>
+    </sv:property>
+    <sv:property sv:name="mu:date" sv:type="Date">
+        <sv:value>2007-08-19T18:03:47.968+04:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mu:author" sv:type="String">
+        <sv:value>Pavel Konnikov</sv:value>
+    </sv:property>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>What is the name of free webmail and POP3 e-mail service provided by Google?</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Miranda IM</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Psi</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Gmail</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+         <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>iChat</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>The expansion of Gmail is Google Mail.</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>True</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>False</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>It competes with:</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Windows Live Mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>AIM Mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Yahoo! Mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Rediffmail</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>How much of storage space does it provide?</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>4 glasses a day</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>1 GB</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>2.7GB</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>2.0 GB</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>1.5 GB</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+     <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>What ranking did Gmail secure in PC World's "The 100 Best Products of 2005?"</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>First</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Second</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Third</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Fourth</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+     <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Which added feature of Gmail avoids loss of data in case of a browser crash or other error?</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Plus-addressing</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Google Mail</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Auto Save feature</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Keyboard shortcuts</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+     <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Gmail usernames must be between:</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>6-10 characters</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>6-30 characters</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>6-12 characters</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>6-16 characters</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+     <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Gmail was a project begun by Google developer:</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Jonathan Rosenberg</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Paul Buchheit</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Copernicus</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Picasa</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+</sv:node>

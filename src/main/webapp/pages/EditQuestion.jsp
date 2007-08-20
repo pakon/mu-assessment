@@ -18,7 +18,6 @@
 %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="javax.jcr.Node" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sess" uri="http://jakarta.apache.org/taglibs/session-1.0" %>
@@ -33,28 +32,36 @@
 <!-- container begin -->
 <div id="container">
 
-    <h1>mu-assessment - Jackrabbit Demo Application</h1>
+    <%@ include file="/include/tabs.jsp" %>
 
     <!-- content begin -->
     <div id="content">
 
-        <h1>Available tests</h1>
-
-        <c:url var="begintest" value="/begintest"/>
-
-        <ul>
-            <c:forEach var="test" items="${testList}">
-                <li>
-                    <%
-                        pageContext.setAttribute("testName", ((Node) pageContext.getAttribute("test")).getProperty("mu:title").getString());
-                    %>
-                    <a href="${begintest}?t_n=${testName}">
-                            ${testName}
-                    </a>
-                </li>
-            </c:forEach>
-        </ul>
-
+        <h2>Question</h2>
+        <c:url var="updateQuestionUrl" value="/update-question"/>
+        <form action="${updateQuestionUrl}?id=${question.id}" method="post">
+            <textarea name="questionText" rows="20" cols="50">${question.text}</textarea><br/>
+            <label for="weight">Ball</label>
+            <input type="text" id="weight" name="weight" value="${question.weight}"/><br/>
+            <ul>
+                <c:forEach var="answer" items="${question.answers}" varStatus="count">
+                    <li>
+                        <c:choose>
+                            <c:when test="${answer.correct}">
+                                <input type="checkbox" checked="checked" name="answer${count.index}"/>
+                            </c:when>
+                            <c:otherwise>
+                                <input type="checkbox" name="answer${count.index}"/>
+                            </c:otherwise>
+                        </c:choose>
+                        <label for="answer${count.index}">${answer.text}</label>
+                    </li>
+                </c:forEach>
+            </ul>
+            <input type="submit" value="Change"/>
+        </form>
+        <c:url var="questionsUrl" value="/package"/>
+        <a href="${questionsUrl}?id=${packageId}">Back to package</a>
     </div>
     <!-- content end -->
 

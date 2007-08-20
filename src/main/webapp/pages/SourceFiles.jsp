@@ -18,6 +18,7 @@
 %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="javax.jcr.Node" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sess" uri="http://jakarta.apache.org/taglibs/session-1.0" %>
@@ -32,18 +33,23 @@
 <!-- container begin -->
 <div id="container">
 
-    <h1>mu-assessment - Jackrabbit Demo Application</h1>
+    <%@ include file="/include/tabs.jsp"%>
+    <%@ include file="/include/source-links.jsp"%>
 
     <!-- content begin -->
     <div id="content">
 
-        <h1>System Error!</h1>
+        <h2>Source files used for constructing page ${currentPage}</h2>
 
-        <c:url var="welcomeUrl" value="/welcome"/>
 
-        <p>
-            <a href="${welcomeUrl}">Go to welcome page...</a>
-        </p>
+        <ul>
+            <c:forEach var="file" items="${files}">
+                <li>
+                    <c:url var="sourceLink" value="/sources?file=${file}"/>
+                    <a href="${sourceLink}">${file}</a>
+                </li>
+            </c:forEach>
+        </ul>
 
     </div>
     <!-- content end -->

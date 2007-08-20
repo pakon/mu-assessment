@@ -18,6 +18,7 @@
 %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="javax.jcr.Node" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sess" uri="http://jakarta.apache.org/taglibs/session-1.0" %>
@@ -32,22 +33,33 @@
 <!-- container begin -->
 <div id="container">
 
-    <h1>mu-assessment - Jackrabbit Demo Application</h1>
+    <%@ include file="/include/tabs.jsp" %>
 
     <!-- content begin -->
     <div id="content">
 
-        <h1>GSoC 2007</h1>
+        <h2>Tests by topic</h2>
 
-        <p>mu-assessment tsting system developed as GSoC 2007 project. Application proposal can be found at
-        <a href="http://konnikov.net/GSoC/2007/jackrabbit-jcr-demo/">http://konnikov.net/GSoC/2007/jackrabbit-jcr-demo/</a>
-        </p>
-
-        <h1>Initial code</h1>
-
-        <p>This application is initial commit. Project home page is
-        <a href="http://code.google.com/p/mu-assessment/">http://code.google.com/p/mu-assessment/</a>
-        </p>
+        <c:url var="beginTestUrl" value="/begin-test"/>
+        <c:url var="deleteTestUrl" value="/delete-test"/>
+        <c:url var="editTestUrl" value="/edit-test"/>
+        <c:url var="imagesUrl" value="/images"/>
+        <ul>
+            <c:forEach var="topic" items="${topics}">
+                <li class="topic-with-tests">
+                    <h3>${topic.theme}</h3>
+                    <ul>
+                        <c:forEach var="test" items="${topic.tests}">
+                            <li>
+                                <a href="${beginTestUrl}?id=${test.id}">${test.title}</a>
+                                <%--<a href="${editTestUrl}?id=${test.id}"> <img src="${imagesUrl}/cart_edit.png"/></a>--%>
+                                <%--<a href="${deleteTestUrl}?id=${test.id}"> <img src="${imagesUrl}/cart_delete.png"/></a>--%>
+                            </li>
+                        </c:forEach>
+                    </ul>
+                </li>
+            </c:forEach>
+        </ul>
 
     </div>
     <!-- content end -->

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+         xmlns:mu="http://www.konnikov.net/GSoC/2007/jackrabbit-jcr-demo/0.1" xmlns:rep="internal"
+         xmlns:fn_old="http://www.w3.org/2004/10/xpath-functions" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+         xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+         xmlns:fn="http://www.w3.org/2005/xpath-functions" sv:name="questions-package">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mu:questionPackage</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>f17b0d02-d05e-4482-9ea8-e6bf12cced4d</sv:value>
+    </sv:property>
+    <sv:property sv:name="mu:date" sv:type="Date">
+        <sv:value>2007-08-19T18:03:47.968+04:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:created" sv:type="Date">
+        <sv:value>2007-08-19T18:48:37.828+04:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mu:author" sv:type="String">
+        <sv:value>Pavel Konnikov</sv:value>
+    </sv:property>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>7ae9170f-2ee7-4b93-9e4a-aa1550ebdbaf</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Who are known as The Olympians?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-19T18:48:37.828+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>12 Gods that lived in a palace in Mount Olympus</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.828+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>12 Members of the Marathon run at the Olympics</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.828+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>12 Maids that were photographed by an Olympus</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.828+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>12 Kids whose names are Olympic</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>5353aec9-692b-4fd2-b8ff-13253e91a323</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>3</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Who are Zeus parents?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Lucy and Desi</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Jupiter and Venus</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Cronus and Rhea</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Ramses and Osiris</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>5ae63139-415f-4f9e-b8bb-1df28d0d5111</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Who is known as the Goddess of love?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Diana</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Aphrodite</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Venus</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Hera</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+    <sv:node sv:name="question">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>mu:question</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+            <sv:value>a1c3474e-f56e-4b25-a740-00fd93578b47</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:weight" sv:type="Long">
+            <sv:value>5</sv:value>
+        </sv:property>
+        <sv:property sv:name="mu:text" sv:type="String">
+            <sv:value>Who is known as the messenger of the Gods and guide of dead souls?</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:created" sv:type="Date">
+            <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+        </sv:property>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Emesen</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>true</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Hermes</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Gucci</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+        <sv:node sv:name="answer">
+            <sv:property sv:name="jcr:primaryType" sv:type="Name">
+                <sv:value>mu:answer</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:text" sv:type="String">
+                <sv:value>Dolcegabanna</sv:value>
+            </sv:property>
+            <sv:property sv:name="jcr:created" sv:type="Date">
+                <sv:value>2007-08-19T18:48:37.843+04:00</sv:value>
+            </sv:property>
+            <sv:property sv:name="mu:correct" sv:type="Boolean">
+                <sv:value>false</sv:value>
+            </sv:property>
+        </sv:node>
+    </sv:node>
+</sv:node>

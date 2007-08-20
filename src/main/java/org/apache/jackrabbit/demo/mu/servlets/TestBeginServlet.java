@@ -17,6 +17,8 @@
 package org.apache.jackrabbit.demo.mu.servlets;
 
 import org.apache.jackrabbit.demo.mu.model.TestProcess;
+import org.apache.jackrabbit.demo.mu.model.Test;
+import org.apache.jackrabbit.demo.mu.dao.TestDao;
 import org.apache.log4j.Logger;
 
 import javax.jcr.Node;
@@ -31,7 +33,10 @@ import java.io.IOException;
 import java.text.MessageFormat;
 
 /**
+ * Begin test process.
  *
+ * @author Pavel Konnikov
+ * @version $Revision$ $Date$
  */
 public class TestBeginServlet extends MuServlet
 {
@@ -39,32 +44,29 @@ public class TestBeginServlet extends MuServlet
 
     protected void service(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws ServletException, IOException
     {
-        String testName = httpServletRequest.getParameter("t_n");
+        String testId = httpServletRequest.getParameter("id");
+
         try {
             // login to repository
             loginToRepository();
 
-            // construct query
-            String queryString = MessageFormat.format("select * from mu:test where mu:title = ''{0}''  ", testName);
+            TestDao testDao = new TestDao(session);
+            Test test = testDao.getTest(testId);
 
-            // execute query
-            QueryResult result = session.getWorkspace().getQueryManager().createQuery(queryString, "sql").execute();
-
-            Node testNode = result.getNodes().nextNode();
-            Value[] questionReferenceValues = testNode.getProperty("mu:questionrefs").getValues();
-
-            TestProcess process = new TestProcess(testNode, questionReferenceValues);
+            // create TestProcess object
+            TestProcess process = new TestProcess(test);
 
             httpServletRequest.getSession().setAttribute("process", process);
             httpServletRequest.setAttribute("newtest", true);
 
-            RequestDispatcher requestDispatcher = this.getServletContext().getRequestDispatcher("/process");
-            requestDispatcher.forward(httpServletRequest, httpServletResponse);
+            getServletContext().getRequestDispatcher("/process-test").forward(httpServletRequest, httpServletResponse);
+
         } catch (RepositoryException e) {
-            log.error("Can't process test: " + testName);
-            
-            throw new ServletException(e);
+            log.error("Can't begin test: " + testId);
+            httpServletRequest.getSession().setAttribute("errorDescription", "Can't begin test.");
+            httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/error");
         } finally {
+            // don't forget loguot
             session.logout();
         }
     }

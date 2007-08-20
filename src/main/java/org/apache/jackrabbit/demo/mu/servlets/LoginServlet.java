@@ -17,11 +17,12 @@
 package org.apache.jackrabbit.demo.mu.servlets;
 
 import org.apache.log4j.Logger;
+import org.apache.jackrabbit.demo.mu.dao.UserDao;
+import org.apache.jackrabbit.demo.mu.model.User;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.query.QueryResult;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -58,23 +59,21 @@ public class LoginServlet extends MuServlet
 
             if (result.getNodes().hasNext()) {
                 // get selected user as node
-                Node user = (Node) result.getNodes().next();
+                Node userNode = (Node) result.getNodes().next();
+                UserDao userDao = new UserDao(session);
+                User user = userDao.getUser(userNode);
 
-                // put user data to web session
-                // TODO put to session User bean instead Node
+                // put user bean to web session
                 httpServletRequest.getSession().setAttribute("user", user);
-                httpServletRequest.getSession().setAttribute("user_name", user.getProperty("mu:fullName").getString());
-
-                log.info("User login: " + httpServletRequest.getSession().getAttribute("user_name"));
 
                 // succefully login and redirect to tests list
-                httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/testlist");
+                httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/tests");
             } else {
 
                 System.out.println("Bad pair login/password");
                 log.info("Bad pair login/password");
                 // unsuccefully login and redirect to error page
-                httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/error.jsp");
+                httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/error");
             }
 
         } catch (RepositoryException e) {
@@ -86,7 +85,7 @@ public class LoginServlet extends MuServlet
             httpServletRequest.getSession().removeAttribute("user_name");
 
             // unsuccefully login and redirect to error page
-            httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/error.jsp");
+            httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/error");
             throw new ServletException(e);
         } finally {
             // don't forget loguot
