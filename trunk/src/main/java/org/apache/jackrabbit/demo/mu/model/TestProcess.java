@@ -79,9 +79,12 @@ public class TestProcess
      */
     public void processGivenAnswers(List<Integer> truePositions) throws TestEndException
     {
+        if (questionNumber == 0) {
+            return;
+        }
         try {
             boolean result = true;
-            Question question = (test.getQuestions().get(questionNumber));
+            Question question = (test.getQuestions().get(questionNumber-1));
             List<Answer> answers = question.getAnswers();
             List<Boolean> actualAnswers = new LinkedList<Boolean>();
             for (int i = 0; i < answers.size(); i++) {
