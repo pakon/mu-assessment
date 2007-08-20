@@ -1,0 +1,25 @@
+#summary How to run?
+
+= Introduction =
+
+{{{
+$ svn checkout http://mu-assessment.googlecode.com/svn/trunk/ mu-assessment
+$ cd mu-assessment
+$ mvn package
+$ cd target
+$ cp mu-assessment-1.0-SNAPSHOT.war $CATALINA_HOME/webapps
+$ firefox http://localhost:8080/mu
+}}}
+
+= Details =
+
+Also you will try
+
+{{{
+$ svn checkout http://mu-assessment.googlecode.com/svn/trunk/ mu-assessment
+$ cd mu-assessment
+$ mvn jetty:run-war
+$ firefox http://localhost:8080/mu
+}}}
+
+
